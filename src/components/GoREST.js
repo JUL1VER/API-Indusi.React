@@ -1,6 +1,7 @@
 import { Component } from "react";
 import {GoRestService} from '../services/gorestService';
-import ItemIndus from './listIndus'
+import ItemIndus from './listIndus';
+import HiredInduses from "./hiredInduses";
 
 class GoREST extends Component {
 
@@ -55,18 +56,29 @@ class GoREST extends Component {
     }
 
     render() {
-        const {items, hired, height} = this.state; 
+        const {items, hired, height} = this.state;
+        const elements = hired.map((item,index) => 
+          <HiredInduses onHire = {this.hireIndus} key={index} id={item.id} name={item.name} email ={item.email}/>
+        )
+
           return (
-            <ul className="tableWithCards" style={{height: height}}>
-              <div className="flex">
-              {items.map((item,index) => 
-                <ItemIndus onHire = {this.hireIndus} onDelete={this.deleteIndus} key={index} id={item.id} name={item.name} email ={item.email}/>
-              )}
-              {hired.map((item,index) => 
-                <ItemIndus key={index} id={item.id} name={item.name} email ={item.email}/>
-              )}
+            <>
+              <ul className="tableWithCards" style={{height: height}}>
+                <div className="flex">
+                {items.map((item,index) => 
+                  <ItemIndus onHire = {this.hireIndus} onDelete={this.deleteIndus} key={index} id={item.id} name={item.name} email ={item.email}/>
+                )}
+                </div>
+              </ul>
+              <div className="hiredIndusesPanel">
+                <div className="namePanel"> <p className="textInHiredPanel">Список нанятых индусов</p></div>
+                <div>
+                    <ul className="hiredIndusesUl">
+                        {elements}
+                    </ul>
+                </div>
               </div>
-            </ul>
+            </>
           )
     }
 }

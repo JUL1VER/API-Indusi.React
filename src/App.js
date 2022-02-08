@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <div className='header'> <h1 className='headerText'>:D Список безработных индусов из API :D</h1></div>
+        <div className='header'> <h1 className='headerText'>Список безработных индусов из API</h1></div>
         <GoREST/>
       </div>
     )
