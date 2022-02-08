@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+.app {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-image: url(img/ind.png);
+  font-family: 'PT Serif', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerText{
+  margin: auto;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.tableWithCards{
+  text-align:center;
+  opacity: 0.8;
+  background-color: white;
+  width: 100%;
+  max-width: 2400px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.flex { 
+  display: grid; 
+  height: 100px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 150px; 
+  grid-template-columns: 350px 350px 350px 350px 350px;
+  padding-top: 22px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  height: 100px;
+  background-color: #8B4513;
+  border-bottom: 1px solid;
+  font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.oneCard {
+  background-color: #AFEEEE;
+  border: 1px solid;
+  margin: 10px;
+  float: left;
+  text-align: center;
+  width: 320px;
+  height: 320px;
+  font-weight: bold;
+  display: table;
+}
+
+.personSpace {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  word-break: break-all;
+  border-right: 1px solid black;
+}
+
+.hireButton{
+  width: 80%;
+  height: 15%;
+  opacity: 1;
+  background-color: aquamarine;
+  border: 1px solid black;
+  margin-bottom: 5%;
+}
+
+.deleteButton{
+  width: 80%;
+  height: 15%;
+  background-color: aquamarine;
+  border: 1px solid black;
+  /* margin-top: 150px; */
+}
+
+.buttonsSpace{
+  display: table-cell;
+  vertical-align: middle;
+  width: 30%;
+}
+
+.textInCard{
+  margin: 7px;
+}
+
+.textData{
+  width: 90%;
+  margin: 0 auto;
 }
