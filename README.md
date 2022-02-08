@@ -1,3 +1,5 @@
+В данном проекте я работал с API, который содержит данные (имя, email, etc) о рандомных индусах. Я придумал сделать из них сайт для найма безработных индусов на работу. Можно нанять понравившегося индуса, удалить его из списка вообще, а также после найма снова уволить, повернув Колесо Сансары на новый круг.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
